@@ -12,7 +12,7 @@ logo = Image.open(logoPath).convert('RGBA')
 basewidth = 600
 wpercent = (basewidth/float(logo.size[0]))
 hsize = int((float(logo.size[1])*float(wpercent)))
-logo = logo.resize((basewidth, hsize), Image.ANTIALIAS)
+logo = logo.resize((basewidth, hsize), Image.LANCZOS)
 whiteBg = Image.new("RGBA", logo.size, "WHITE")
 whiteBg.alpha_composite(logo)
 logo = whiteBg
